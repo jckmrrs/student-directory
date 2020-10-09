@@ -15,14 +15,14 @@ def input_students
   end
   #return the array of students
   students
-end 
-print_header
+end
+def print_header
   puts "The students of Villians Academy"
   puts "-------------"
 end
 def print(names)
-  names.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  names.each_with_index do |student, index|
+    puts "#{index + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 def print_footer(names)
