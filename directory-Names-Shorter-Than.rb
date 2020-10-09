@@ -22,7 +22,9 @@ def print_header
 end
 def print(names)
   names.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+    if student[:name].length < 12
+      puts "#{student[:name]} (#{student[:cohort]} cohort)"
+    end
   end
 end
 def print_footer(names)
